@@ -147,7 +147,7 @@ console.log(capitalise("hello"));
 
 
 objectone = {
-  voto = 34,
+  voto : 34,
   number : 20,
   lol: 70
 }
@@ -161,3 +161,63 @@ objectnot.filter(
     console.log(number)
   }
 )
+
+//ok so, here we have the .includes on paramether on an
+var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
+
+function isInUK(country) {
+  return ukNations.includes(country); // complete this statement
+}
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+console.log(isInUK("France"));
+console.log(isInUK("Republic of Ireland"));
+console.log(isInUK("England"));
+
+
+
+
+var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
+
+function isInUK(country) {
+    return country.includes(); // complete this statement
+}
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+console.log("starting the test")
+console.log(isInUK("France"));
+console.log(isInUK("Republic of Ireland"));
+console.log(isInUK("England"));
+
+
+/* ok so, */
+
+const students = Object.keys(studentGrades) // ['tom', 'george', 'abdul']
+for (let i = 0; i < students.length; i++) {
+  const estudiante = students[i]
+  const grade = studentGrades[estudiante]
+  if (grade > 18) {
+    console.log(estudiante + ' - ' + grade)
+  }
+}
+console.log()
+students.filter( // ['tom', 'george', 'abdul']
+  estudiante => {
+    const grade = studentGrades[estudiante]
+    return grade > 18
+  }
+) //[ 'tom', 'abdul' ]
+.forEach(
+  estudiante => {
+    const grade = studentGrades[estudiante]
+    console.log(estudiante + ' - ' + grade)
+  }
+)
+
+/* ok, the loop for the object of the keys inside of it */
+
+ 

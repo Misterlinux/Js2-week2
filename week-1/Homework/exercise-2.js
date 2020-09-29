@@ -19,6 +19,7 @@ let person = {
   */
   
   person.makeFriend("Bob");
+  person.makeFriend("dude")
   
   console.log(
     `Expected result: 'John,Nina,Bob'. Actual result: ${person.friends}`

@@ -60,8 +60,71 @@ var movies = [
 
 // create showMovies function
 
+function listMovies(){
+
+  let all = document.getElementById("all-movies")
+
+  movies.forEach( (movie) => {
+    let thep = document.createElement("p")
+    thep.innerText = `${movie.title} + ${movie.director}`
+    thep.classList = "movie"
+    all.appendChild(thep)
+  })
+  let num = document.getElementById("movies-number")
+  num.innerText = movies.length
+}
+
+setTimeout( listMovies, 2000);
 
 // create a new movie object for your favorite movie
 
+let myMovies = [
+  {
+    title : 'Matrix',
+    director : 'Wakowski Sisters',
+    type : 'Sci Fi',
+    haveWatched: true
+  },
+  {
+    title : 'Titanic',
+    director : 'James Cameron',
+    type : 'Drama',
+    haveWatched: false
+  },
+  {
+    title : 'Jocker',
+    director : 'Todd Phillips',
+    type : 'Comedy',
+    haveWatched: true
+  }
+
+]
+
+function addMovies(movie) {
+  movies.push(movie);
+}
+
+setTimeout(addMovies(myMovies[0]), 1000);
 
 // create addMovies function
+
+function createMovieObj(title, director, type, haveWatched){
+  const movie = {
+    title: title,
+    director : director,
+    type: type,
+    haveWatched: haveWatched    
+  }
+  return movie;
+}
+
+document.getElementById('save').addEventListener('click', event => {
+  event.preventDefault();
+  const title = document.getElementById('input-title').value;
+  const director = document.getElementById('input-director').value;
+  const type = document.getElementById('input-type').value;
+  const haveWatched = document.getElementById('input-watched').check; 
+  const newMovie = createMovieObj(title, director, type, haveWatched);
+  console.log(newMovie);
+  addMovies(newMovie);
+})

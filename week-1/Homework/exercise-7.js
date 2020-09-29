@@ -39,7 +39,9 @@ var writers = [
   },
 ];
 
-writers.filter(ele => ele.alive == true).forEach(el => console.log( `hello my name is ${el.firstName}`))
+writers.filter(non => non.alive == false).forEach(lo => console.log(`hola me llamo ${lo.firstName} and I was a ${lo.occupation} `));
+
+
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
